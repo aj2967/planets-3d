@@ -5,18 +5,22 @@ import EarthCanvas from './components/canvas/EarthCanvas';
 
 function App() {
 
-	const [chosenPlanet, setChosenPlanet] = useState('')
+	const [chosenPlanet, setChosenPlanet] = useState('Earth')
 
 	return (
 		<div className='App'>
-			{/* <div>
-				<button>Button</button>
-				<button>Button</button>
-				<button>Button</button>
-				<button>Button</button>
-			</div> */}
+			<div>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Mercury</button>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Venus</button>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Earth</button>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Mars</button>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Jupiter</button>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Saturn</button>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Uranus</button>
+				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Neptune</button>
+			</div>
 			
-			<EarthCanvas />
+			<EarthCanvas clickedButton={chosenPlanet} />
 		</div>
     );
 }

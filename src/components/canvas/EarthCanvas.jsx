@@ -3,11 +3,12 @@ import { Suspense } from 'react';
 import { Earth } from '../earth/Earth';
 import { Planet } from '../planet/Planet';
 
-const EarthCanvas = () => {
+const EarthCanvas = ({ clickedButton }) => {
+    // console.log(clickedButton);
   return (
     <Canvas>
         <Suspense fallback={null}>
-            <Planet />
+            <Planet clickedButton={clickedButton} />
         </Suspense>
     </Canvas>
   )
