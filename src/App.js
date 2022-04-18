@@ -9,7 +9,7 @@ function App() {
 
 	return (
 		<div className='App'>
-			<div>
+			<div className='buttons'>
 				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Mercury</button>
 				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Venus</button>
 				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Earth</button>

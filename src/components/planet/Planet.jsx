@@ -81,7 +81,7 @@ export const Planet = (props) => {
                     roughness={.7} 
                 />
                 <OrbitControls 
-                    enableZoom={false} 
+                    enableZoom={true} 
                     enablePan={true} 
                     enableRotate={true} 
                     zoomSpeed={.6} 
