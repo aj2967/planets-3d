@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import MyCanvas from './components/canvas/MyCanvas';
 
-import EarthCanvas from './components/canvas/EarthCanvas';
 
 
 function App() {
@@ -10,17 +11,17 @@ function App() {
 	return (
 		<div className='App'>
 			<div className='buttons'>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Mercury</button>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Venus</button>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Earth</button>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Mars</button>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Jupiter</button>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Saturn</button>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Uranus</button>
-				<button onClick={e => setChosenPlanet(e.target.innerHTML)}>Neptune</button>
+				<Link to='/'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Mercury</button></Link>
+				<Link to='/'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Venus</button></Link>
+				<Link to='earth'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Earth</button></Link>
+				<Link to='/'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Mars</button></Link>
+				<Link to='/'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Jupiter</button></Link>
+				<Link to='/'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Saturn</button></Link>
+				<Link to='/'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Uranus</button></Link>
+				<Link to='/'><button onClick={e => setChosenPlanet(e.target.innerHTML)}>Neptune</button></Link>
 			</div>
 			
-			<EarthCanvas clickedButton={chosenPlanet} />
+			<MyCanvas clickedButton={chosenPlanet} />
 		</div>
     );
 }
