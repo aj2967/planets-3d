@@ -6,7 +6,7 @@ import MyCanvas from './components/canvas/MyCanvas';
 
 function App() {
 
-	const [chosenPlanet, setChosenPlanet] = useState('Earth')
+	const [chosenPlanet, setChosenPlanet] = useState('Mercury')
 
 	return (
 		<div className='App'>
