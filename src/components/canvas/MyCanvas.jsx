@@ -16,8 +16,16 @@ const MyCanvas = ({ clickedButton }) => {
               </Suspense>
           </Canvas>
         </>} />
+
+        <Route path='/planets-3d' element={<>
+          <Canvas>
+              <Suspense fallback={null}>
+                  <Planet clickedButton={clickedButton} />
+              </Suspense>
+          </Canvas>
+        </>} />
         
-        <Route path='/earth' element={<>
+        <Route path='/planets-3d/earth' element={<>
           <Canvas>
               <Suspense fallback={null}>
                   <Earth clickedButton={clickedButton} />
