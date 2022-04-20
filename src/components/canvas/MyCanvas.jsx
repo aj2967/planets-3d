@@ -2,8 +2,9 @@ import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom'
 
-import { Earth } from '../earth/Earth';
 import { Planet } from '../planet/Planet';
+import { Earth } from '../earth/Earth';
+import { Saturn } from '../saturn/Saturn';
 
 const MyCanvas = ({ clickedButton }) => {
     // console.log(clickedButton);
@@ -32,6 +33,14 @@ const MyCanvas = ({ clickedButton }) => {
               </Suspense>
           </Canvas>
         </>} />
+        
+        {/* <Route path='/planets-3d/saturn' element={<>
+          <Canvas>
+              <Suspense fallback={null}>
+                  <Saturn clickedButton={clickedButton} />
+              </Suspense>
+          </Canvas>
+        </>} /> */}
       </Routes>
   )
 }
